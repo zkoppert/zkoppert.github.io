@@ -18,3 +18,4 @@ Now every time that Jenkins crashed, a version updgrade was needed, or the hardw
 
 Time to recovery for this system was greatly improved by this automation. It went from approximately 24 hours to less than 1 hour.
 
+![CLI gif](https://github.com/zkoppert/zkoppert.github.io/blob/main/images/vagrant-cli.gif?raw=true)

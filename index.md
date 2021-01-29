@@ -9,6 +9,10 @@
 
 ### Professional 
 
+[Launching an InnerSource Project Portal](/launching-innersource-portal)
+<img src="https://github.com/SAP/project-portal-for-innersource/raw/main/overview.png"/>
+
+---
 [Self Building Jenkins CI Server](/self-building-jenkins)
 <img src="images/vagrant.png?raw=true"/>
 

@@ -9,7 +9,7 @@
 
 ### Professional 
 
-[Launching an InnerSource Project Portal](/launching-innersource-portal)
+[Launching an InnerSource Project Portal](/Launching-InnerSource-Portal)
 <img src="https://github.com/SAP/project-portal-for-innersource/raw/main/overview.png"/>
 
 ---

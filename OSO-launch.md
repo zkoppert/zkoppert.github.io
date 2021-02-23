@@ -1,3 +1,5 @@
+<img alt="Rocket Launch" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/rocket.png">
+
 # Launching an Open Source Office
 
 **Project Description:** At a previous company I began noticing that we were spending a lot of time "reinventing" projects that already existed as open source or even rebuilding our own version of proprietary things that other business units in the same company already had built.  

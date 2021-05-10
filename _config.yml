@@ -2,10 +2,11 @@ title: Zack Koppert # your name (or website title) here
 logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   Senior Software Engineer @ GitHub, Professional Services
-  <br><br>
+  <br>
   Previously @ Tektronix, Open Source Team
   <br><br>
   <a href="https://www.linkedin.com/in/zack-koppert/">LinkedIn Profile</a>
+  <br>
   <a href="https://www.youtube.com/playlist?list=PLlGvWIFG1z64HULQmOW25mHXwTyqP63Q9">Recorded Conference Talks</a> 
   
 theme: jekyll-theme-minimal

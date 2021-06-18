@@ -20,4 +20,4 @@ This makes hosting a one-click setup in the settings tab of the repository.
 As for the innersource crawler, I have created [a project](https://github.com/zkoppert/innersource-crawler) to handle that part. Along with some GitHub actions magic, it all works great.
 The GitHub action takes the repos.json created by the crawler and feeds it to the project portal website. Check out what this looks like below.
 
-<img alt="InnerSource Project Portal" src="https://github.com/SAP/project-portal-for-innersource/raw/main/overview.png">
+<img alt="InnerSource Project Portal" src="https://raw.githubusercontent.com/SAP/project-portal-for-innersource/main/docs/overview.png">

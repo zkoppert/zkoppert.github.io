@@ -9,6 +9,11 @@
 
 ### Professional 
 
+[A tool to help you keep your open source catalog organized and up to date](https://github.blog/2023-06-05-announcing-the-stale-repos-action/)
+<img src="https://github.blog/wp-content/uploads/2019/08/DL-V2-Bloghero.png?resize=1280%2C600"/>
+
+---
+
 [An open source project to empower OSPOs everywhere](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/)
 <img src="https://github.blog/wp-content/uploads/2023/03/image2-4.png?resize=1280%2C688"/>
 

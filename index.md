@@ -9,6 +9,11 @@
 
 ### Professional 
 
+[Metrics for issues, pull requests, and discussions](https://github.blog/2023-07-19-metrics-for-issues-pull-requests-and-discussions/)
+<img src="https://github.blog/wp-content/uploads/2023/07/249623366-82c20ded-dc55-4d92-a9af-bb75b5f618cd.png?resize=1200%2C630"/>
+
+---
+
 [A tool to help you keep your open source catalog organized and up to date](https://github.blog/2023-06-05-announcing-the-stale-repos-action/)
 <img src="https://github.blog/wp-content/uploads/2019/08/DL-V2-Bloghero.png?resize=1280%2C600"/>
 

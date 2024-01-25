@@ -9,6 +9,11 @@
 
 ### Professional 
 
+[How to gain insight into your project contributors](https://github.blog/2024-01-25-do-you-know-if-all-your-repositories-have-up-to-date-dependencies/)
+<img src="https://github.blog/wp-content/uploads/2023/12/Productivity-LightMode-2.png?resize=1200%2C630"/>
+
+---
+
 [How to gain insight into your project contributors](https://github.blog/2023-10-23-how-to-gain-insight-into-your-project-contributors/)
 <img src="https://github.blog/wp-content/uploads/2021/01/102393310-07478b80-3f8d-11eb-84eb-392d555ebd29.png?resize=1200%2C630"/>
 

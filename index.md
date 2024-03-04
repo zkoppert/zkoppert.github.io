@@ -1,4 +1,3 @@
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -8,6 +7,11 @@
 ---
 
 ### Professional 
+
+[Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/)
+<img src="https://github.blog/wp-content/uploads/2023/10/Collaboration-DarkMode-3.png?resize=1200%2C630"/>
+
+---
 
 [How to gain insight into your project contributors](https://github.blog/2024-01-25-do-you-know-if-all-your-repositories-have-up-to-date-dependencies/)
 <img src="https://github.blog/wp-content/uploads/2023/12/Productivity-LightMode-2.png?resize=1200%2C630"/>

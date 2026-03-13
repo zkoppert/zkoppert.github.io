@@ -58,7 +58,7 @@ This all leads to your ROI story. If you run the tool on 20 repositories and fin
 
 Before you start measuring, let me save you from the mistakes I see organizations make all the time.
 
-**Mistake #1: Git-itis.** "We have 10,000 commits this quarter - InnerSource is working!" Git activity is a lagging indicator at best, and often misleading. High commit volume might indicate inefficient development practices, not healthy collaboration.
+**Mistake #1: Git-itis.** "We have 10,000 commits this quarter (up 20%!) - InnerSource is working!" Git activity is a lagging indicator at best, and often misleading. High commit volume might indicate inefficient development practices, not healthy collaboration.
 
 **Mistake #2: Vanity metrics obsession.** Measuring things like "number of repositories" or "total contributors" without context. It's like measuring a company's success by counting how many meetings they have. The metrics need to tie back to meaningful outcomes.
 

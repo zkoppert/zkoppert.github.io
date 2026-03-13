@@ -8,6 +8,11 @@
 
 ### Professional 
 
+[Can You Measure InnerSource?](/can-you-measure-innersource)
+<img src="https://github.blog/wp-content/uploads/2022/05/image3-1.png?w=300&resize=300%2C300"/>
+
+---
+
 [Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/)
 <img src="https://github.blog/wp-content/uploads/2023/10/Collaboration-DarkMode-3.png?resize=1200%2C630"/>
 

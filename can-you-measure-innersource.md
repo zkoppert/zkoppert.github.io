@@ -1,4 +1,4 @@
-<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="https://octodex.github.com/images/collabocats.jpg"/>
+<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="images/collabocats.jpg"/>
 
 # Can You Measure InnerSource?
 

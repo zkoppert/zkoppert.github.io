@@ -2,7 +2,7 @@
 
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then hears: "Figure out how to measure if it's working."
 
-I know this because it happened to me. At a previous company, I was able to convey the need for InnerSource by demonstrating how much rework we were doing across departments. The CEO didn't like hearing about rework and waste, so we got approval - with a catch. I walked out of that meeting excited about the green light but also terrified, because I had no idea how to actually measure InnerSource success.
+I know this because it happened to me. At a previous company, I was able to convey the need for InnerSource by demonstrating how much rework we were doing across departments. The CEO didn't like hearing about rework and waste, so we got approval - with a catch. The condition was: "Figure out how to measure if it's working." I walked out of that meeting excited about the green light but also terrified, because I had no idea how to actually measure InnerSource success.
 
 This story isn't unique. I've heard from many others in the InnerSource community who face the same challenge. And I've also seen InnerSource programs get cancelled because stakeholders couldn't see tangible value. When you can't demonstrate return on investment, programs lose funding and support. That's not just a measurement problem - that becomes a sustainability problem.
 

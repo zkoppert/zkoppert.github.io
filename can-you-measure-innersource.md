@@ -34,31 +34,7 @@ The tool automatically identifies all contributors to your repository, maps them
 
 In one report I generated, we discovered that while a repository had 25 total contributors, only 8 were from the owning team. That's a 68% InnerSource participation rate. The tool showed us exactly who these external contributors were and which teams they came from.
 
-To ground this in what those percentages actually mean, let's look at a few examples:
-
-**0% InnerSource contributions**
-
-<img alt="0 percent innersource contributions shown as a pie chart with all one color" src="https://github.blog/wp-content/uploads/2022/05/image3-1.png?w=300&resize=300%2C300"/>
-
-A measurement of 0% for a project means nobody outside a team has made any contributions over a given time period. The project may still be used by other teams, but no contributions are coming in. This can be a starting point to build from, or a perfectly fine destination if your goal is reuse rather than collaboration.
-
-**5% InnerSource contributions**
-
-<img alt="5 percent innersource contributions shown as a pie chart with a small slice" src="https://github.blog/wp-content/uploads/2022/05/image2-1.png?w=300&resize=300%2C300"/>
-
-This level indicates that other teams are contributing important but minimal changes - bug fixes, documentation additions, small corrections. The original authors still maintain control over the project direction.
-
-**20% InnerSource contributions**
-
-<img alt="20 percent innersource contributions shown as a pie chart with a notable slice" src="https://github.blog/wp-content/uploads/2022/05/image1-1.png?w=300&resize=300%2C300"/>
-
-At 20%, developers from other teams are making substantial changes to packages they don't own but want to use. Imagine a company where an authentication package only has basic username and password functionality. A new product team needs two-factor authentication, so they add it themselves, get approval from the original authors, and ship it. That kind of meaningful feature contribution is what drives this number up. It saves time and headaches by avoiding the need to go up and down the corporate chain of command to get anything done.
-
-**50% InnerSource contributions**
-
-<img alt="50 percent innersource contributions shown as a pie chart split evenly" src="https://github.blog/wp-content/uploads/2022/05/image4-1.png?w=300&resize=300%2C300"/>
-
-This represents true joint ventures where multiple teams build a project collaboratively and ownership spans across the organizational structure.
+If you want to dig deeper into what different InnerSource percentages actually mean in practice - from 0% all the way to 50% - I covered that in detail in an [earlier post on measuring innersource across your organization](https://github.blog/2022-05-16-how-to-measure-innersource-across-your-organization/).
 
 ### 2. Contribution volume
 

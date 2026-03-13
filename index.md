@@ -8,6 +8,11 @@
 
 ### Professional 
 
+[Can You Measure InnerSource?](/can-you-measure-innersource)
+<img alt="Collabocats - two GitHub Octocats working together, representing cross-team collaboration" src="images/collabocats.jpg"/>
+
+---
+
 [Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/)
 <img src="https://github.blog/wp-content/uploads/2023/10/Collaboration-DarkMode-3.png?resize=1200%2C630"/>
 

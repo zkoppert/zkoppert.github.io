@@ -9,7 +9,7 @@
 ### Professional 
 
 [Can You Measure InnerSource?](/can-you-measure-innersource)
-<img src="https://github.blog/wp-content/uploads/2022/05/image3-1.png?w=300&resize=300%2C300"/>
+<img alt="Collabocats - two GitHub Octocats working together, representing cross-team collaboration" src="https://octodex.github.com/images/collabocats.jpg"/>
 
 ---
 

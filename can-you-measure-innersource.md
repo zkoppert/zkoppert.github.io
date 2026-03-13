@@ -1,6 +1,6 @@
 # Can You Measure InnerSource?
 
-I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then hears: "Figure out how to measure if it's working."
+I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
 
 I know this because it happened to me. At a previous company, I was able to convey the need for InnerSource by demonstrating how much rework we were doing across departments. The CEO didn't like hearing about rework and waste, so we got approval - with a catch. The condition was: "Figure out how to measure if it's working." I walked out of that meeting excited about the green light but also terrified, because I had no idea how to actually measure InnerSource success.
 
@@ -8,7 +8,7 @@ This story isn't unique. I've heard from many others in the InnerSource communit
 
 So I built a tool to help. And in this post, I want to share the framework I've developed for measuring InnerSource, the common mistakes I see organizations make, and how you can start measuring today.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ao9JLzX7yK4" title="Can You Measure InnerSource? - Conference Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ao9JLzX7yK4" title="Can You Measure InnerSource? - Conference Talk" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 *This post is based on my conference talk at the InnerSource Commons Summit. You can watch the full recording above.*
 
@@ -98,4 +98,6 @@ The problem of measuring InnerSource is genuinely hard. It requires defining ter
 
 InnerSource measurement isn't about agreeing on ideals - it's about demonstrating the value of the practice.
 
-If you want to go deeper, check out my earlier posts on this topic: [How to measure innersource across your organization](https://github.blog/2022-05-16-how-to-measure-innersource-across-your-organization/) and [Securing and delivering high-quality code with innersource metrics](https://github.blog/2022-05-18-securing-and-delivering-high-quality-code-with-innersource-metrics/). And if you have questions or want to share your own InnerSource measurement journey, feel free to [open an issue](https://github.com/github-community-projects/measure-innersource/issues) on the project. I'd love to hear from you.
+If you have questions or want to share your own InnerSource measurement journey, feel free to [open an issue](https://github.com/github-community-projects/measure-innersource/issues) on the project. I'd love to hear from you.
+
+<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="https://octodex.github.com/images/collabocats.jpg"/>

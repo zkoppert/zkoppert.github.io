@@ -1,3 +1,5 @@
+<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="https://octodex.github.com/images/collabocats.jpg"/>
+
 # Can You Measure InnerSource?
 
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
@@ -99,5 +101,3 @@ The problem of measuring InnerSource is genuinely hard. It requires defining ter
 InnerSource measurement isn't about agreeing on ideals - it's about demonstrating the value of the practice.
 
 If you have questions or want to share your own InnerSource measurement journey, feel free to [open an issue](https://github.com/github-community-projects/measure-innersource/issues) on the project. I'd love to hear from you.
-
-<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="https://octodex.github.com/images/collabocats.jpg"/>

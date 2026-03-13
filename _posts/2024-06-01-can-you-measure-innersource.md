@@ -1,6 +1,12 @@
-<img alt="Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration" src="images/collabocats.jpg"/>
-
-# Can You Measure InnerSource?
+---
+title: "Can You Measure InnerSource?"
+date: 2024-06-01
+categories: [InnerSource, Measurement]
+tags: [innersource, metrics, github-actions, open-source]
+image:
+  path: /assets/img/posts/collabocats.jpg
+  alt: "Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration"
+---
 
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
 
@@ -10,7 +16,7 @@ This story isn't unique. I've heard from many others in the InnerSource communit
 
 So I built a tool to help. And in this post, I want to share the framework I've developed for measuring InnerSource, the common mistakes I see organizations make, and how you can start measuring today.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ao9JLzX7yK4" title="Can You Measure InnerSource? - Conference Talk" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include embed/youtube.html id='ao9JLzX7yK4' %}
 
 *This post is based on my conference talk at the InnerSource Commons Summit. You can watch the full recording above.*
 

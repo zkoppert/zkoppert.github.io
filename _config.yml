@@ -1,13 +1,144 @@
-title: Zack Koppert # your name (or website title) here
-logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  Senior Software Engineer @ GitHub, OSPO
-  <br>
-  Previously @ Tektronix, Open Source Team
-  <br><br>
-  <a href="https://www.linkedin.com/in/zack-koppert/">LinkedIn Profile</a>
-  <br>
-  <a href="https://www.youtube.com/playlist?list=PLlGvWIFG1z64HULQmOW25mHXwTyqP63Q9">Recorded Conference Talks</a> 
-  
-theme: jekyll-theme-minimal
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage
+lang: en
+
+# Change to your timezone
+timezone: America/Los_Angeles
+
+# jekyll-seo-tag settings
+title: Zack Koppert
+tagline: Senior Software Engineer @ GitHub, OSPO
+description: >-
+  Personal blog of Zack Koppert - Senior Software Engineer at GitHub's Open Source
+  Programs Office. Writing about InnerSource, open source, DevOps, and developer tooling.
+
+url: "https://zackkoppert.com"
+
+github:
+  username: zkoppert
+
+social:
+  name: Zack Koppert
+  links:
+    - https://github.com/zkoppert
+    - https://www.linkedin.com/in/zack-koppert/
+
+# Web Analytics Settings
+analytics:
+  google:
+    id: # fill in your Google Analytics 4 ID (G-XXXXXXXXXX) if desired
+
+# Prefer color scheme setting.
+# Keep empty to follow system preference with a toggle on the sidebar.
+theme_mode:
+
+# the avatar on sidebar
+avatar: /assets/img/logo.jpg
+
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+social_preview_image: /assets/img/logo.jpg
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+comments:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+  giscus:
+    repo: # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+assets:
+  self_host:
+    enabled:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+baseurl: ""
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

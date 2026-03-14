@@ -16,7 +16,7 @@ Merge conflicts are inevitable in any codebase with active development. But ther
 
 The traditional approach to dealing with merge conflicts is reactive: you find out about them when you try to merge. By then, both authors have invested significant time building on top of diverging code. The fix is no longer a quick resolution - it's a rework exercise where someone has to untangle two independently developed features that were never meant to coexist in their current form.
 
-What we needed was a way to detect these conflicts early - ideally as soon as two PRs start touching the same lines of code. Not when one of them tries to merge, but while both are still in progress and the authors still have time to coordinate.
+What we needed was a way to detect these conflicts early - ideally as soon as two PRs start touching the same lines of code. Not when one of them tries to merge, but while both are still in progress and the authors still have time to coordinate. This works well at GitHub since we push draft pull requests early for visibility.
 
 ## What the PR Conflict Detector does
 

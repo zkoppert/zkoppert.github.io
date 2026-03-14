@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Launching an InnerSource Portal | Zack Koppert</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Launching an InnerSource Portal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks" />
+<meta property="og:description" content="Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks" />
+<link rel="canonical" href="https://github.com/pr-preview/pr-13/Launching-InnerSource-Portal.html" />
+<meta property="og:url" content="https://github.com/pr-preview/pr-13/Launching-InnerSource-Portal.html" />
+<meta property="og:site_name" content="Zack Koppert" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Launching an InnerSource Portal" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks","headline":"Launching an InnerSource Portal","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/pr-preview/pr-13/images/logo.jpg?raw=true"}},"url":"https://github.com/pr-preview/pr-13/Launching-InnerSource-Portal.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/pr-preview/pr-13/assets/css/style.css?v=ad00ced700314718cada31406179460d40e13b23">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="https://github.com/pr-preview/pr-13/">Zack Koppert</a></h1>
+        
+        
+          <img src="/pr-preview/pr-13/images/logo.jpg?raw=true" alt="Logo" />
+        
+
+        <p>Senior Software Engineering Manager @ GitHub <br> Previously @ Tektronix, Open Source Team <br><br> <a href="https://www.linkedin.com/in/zack-koppert/">LinkedIn Profile</a> <br> <a href="https://www.youtube.com/playlist?list=PLlGvWIFG1z64HULQmOW25mHXwTyqP63Q9">Recorded Conference Talks</a> 
+</p>
+
+        
+
+        
+        <p class="view"><a href="https://github.com/zkoppert">View My GitHub Profile</a></p>
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="launching-an-innersource-portal">Launching an InnerSource Portal</h1>
+
+<p><strong>Project Description:</strong> 
+  In working as a consultant for companies, I have visibility into companies working hard to make InnerSource work.
+  One crucial part of that is what’s referred to as the “discovery” problem.
+  The problem is essentially, once InnerSource projects start up as a company,
+  it needs to be easy to discover those projects for anyone looking to start a new project that utilizes them.
+  To solve this problem, in comes the InnerSource Project Portal.</p>
+
+<h2 id="what-is-innersource">What is InnerSource</h2>
+<p>InnerSource is basically open source but inside a company or set of companies.
+You can imagine that it might be desirable for a company to share reusable components internally,
+but due to legal/monetization/other reasons they don’t want to share beyond the company as open source.</p>
+
+<h2 id="how-to-do-it">How to do it</h2>
+<p>SAP release a beautiful project called <a href="https://github.com/SAP/project-portal-for-innersource">SAP InnerSource Project Portal</a>.
+As you can read from their <code class="language-plaintext highlighter-rouge">README.md</code>, the only pieces missing from this project is hosting, and an innersource crawler.
+Luckily GitHub’s recently announced <a href="https://pages.github.com/">Pivate pages</a>.
+This makes hosting a one-click setup in the settings tab of the repository.
+As for the innersource crawler, I have created <a href="https://github.com/zkoppert/innersource-crawler">a project</a> to handle that part. Along with some GitHub actions magic, it all works great.
+The GitHub action takes the repos.json created by the crawler and feeds it to the project portal website. Check out what this looks like below.</p>
+
+<p><img alt="InnerSource Project Portal" src="https://raw.githubusercontent.com/SAP/project-portal-for-innersource/main/docs/overview.png" /></p>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/pr-preview/pr-13/assets/js/scale.fix.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-000000-0', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+  </body>
+</html>

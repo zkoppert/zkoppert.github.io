@@ -8,6 +8,11 @@
 
 ### Professional 
 
+[Catching Merge Conflicts Before They Catch You](/catching-merge-conflicts)
+<img alt="GitHub social card with Octocat logo on blue background" src="images/pr-conflict-detector-hero.png"/>
+
+---
+
 [Can You Measure InnerSource?](/can-you-measure-innersource)
 <img alt="Collabocats - two GitHub Octocats working together, representing cross-team collaboration" src="images/collabocats.jpg"/>
 

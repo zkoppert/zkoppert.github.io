@@ -6,7 +6,7 @@ order: 4
 
 ## Hey, I'm Zack
 
-I'm a **Senior Software Engineer** at [GitHub](https://github.com)'s **Open Source Programs Office (OSPO)**. I build tools that help organizations measure, manage, and scale their open source and InnerSource programs.
+I'm a **Senior Software Engineering Manager** at [GitHub](https://github.com)'s **Open Source Programs Office (OSPO)**. I build tools that help organizations measure, manage, and scale their open source and InnerSource programs.
 
 Previously, I led open source and InnerSource initiatives at Tektronix, where I launched an Open Source Office from scratch and drove cross-team collaboration practices across the engineering org.
 
@@ -25,6 +25,7 @@ I regularly speak at conferences about InnerSource and open source programs. You
 
 I maintain several open source GitHub Actions in the [github-community-projects](https://github.com/github-community-projects) org:
 
+- [**pr-conflict-detector**](https://github.com/github-community-projects/pr-conflict-detector) - Catch merge conflicts before they catch you
 - [**issue-metrics**](https://github.com/github-community-projects/issue-metrics) - Metrics for issues, pull requests, and discussions
 - [**measure-innersource**](https://github.com/github-community-projects/measure-innersource) - Measure InnerSource collaboration across your org
 - [**contributors**](https://github.com/github-community-projects/contributors) - Gain insight into your project contributors

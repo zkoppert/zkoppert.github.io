@@ -1,6 +1,6 @@
 ---
 title: "Launching an InnerSource Project Portal"
-date: 2020-12-01
+date: 2021-01-28
 categories: [InnerSource, Tooling]
 tags: [innersource, portal, github-pages, open-source]
 image:

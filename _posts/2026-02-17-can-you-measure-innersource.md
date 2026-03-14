@@ -1,12 +1,14 @@
 ---
 title: "Can You Measure InnerSource?"
-date: 2024-06-01
+date: 2026-02-17
 categories: [InnerSource, Measurement]
 tags: [innersource, metrics, github-actions, open-source]
 image:
   path: /assets/img/posts/collabocats.jpg
   alt: "Collabocats - two GitHub Octocats working together at a shared desk, representing cross-team collaboration"
 ---
+
+*February 17, 2026*
 
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
 

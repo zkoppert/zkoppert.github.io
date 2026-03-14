@@ -1,6 +1,6 @@
 ---
 title: "Launching an Open Source Office"
-date: 2018-06-15
+date: 2020-08-03
 categories: [Open Source, Leadership]
 tags: [ospo, open-source, innersource, strategy]
 image:

@@ -1,6 +1,6 @@
 ---
 title: "Self Building Jenkins CI Server"
-date: 2019-01-15
+date: 2020-08-03
 categories: [DevOps, Automation]
 tags: [jenkins, vagrant, ci-cd, infrastructure-as-code]
 image:

@@ -11,12 +11,17 @@ timezone: America/Los_Angeles
 
 # jekyll-seo-tag settings
 title: Zack Koppert
-tagline: Senior Software Engineer @ GitHub, OSPO
+tagline: Senior Software Engineering Manager @ GitHub
 description: >-
-  Personal blog of Zack Koppert - Senior Software Engineer at GitHub's Open Source
-  Programs Office. Writing about InnerSource, open source, DevOps, and developer tooling.
+  Personal blog of Zack Koppert - Senior Software Engineering Manager at GitHub's
+  Open Source Programs Office. Writing about InnerSource, open source, DevOps,
+  and developer tooling.
 
 url: "https://zackkoppert.com"
+baseurl: ""
+
+# Ensure CNAME is included in build output for custom domain
+include: [CNAME]
 
 github:
   username: zkoppert
@@ -70,8 +75,6 @@ pwa:
     deny_paths:
 
 paginate: 10
-
-baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 

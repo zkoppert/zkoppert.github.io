@@ -1,8 +1,12 @@
-<img alt="Inspectocat - the Octocat as a detective with a magnifying glass, inspecting for hidden merge conflicts" src="images/inspectocat.jpg"/>
-
-# Catching Merge Conflicts Before They Catch You
-
-*March 13, 2026*
+---
+title: "Catching Merge Conflicts Before They Catch You"
+date: 2026-03-13
+categories: [Open Source, Tooling]
+tags: [github-actions, merge-conflicts, developer-tooling, open-source]
+image:
+  path: /assets/img/posts/inspectocat.jpg
+  alt: "Inspectocat - the Octocat as a detective with a magnifying glass, inspecting for hidden merge conflicts"
+---
 
 We were three engineering teams at GitHub, all jumping into the same product space at the same time. Multiple concurrent work streams, tight timelines, and a shared codebase. Everything was moving fast - until the 11th hour, when we discovered that the work we'd each been doing was stepping on each other's toes. The resulting merge conflicts caused days of rework. Not hours. Days.
 

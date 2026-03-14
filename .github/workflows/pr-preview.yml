@@ -20,12 +20,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
 
       - name: Setup Ruby
         if: github.event.action != 'closed'
         uses: ruby/setup-ruby@4eb9f110bac952a8b68ecf92e3b5c7a987594ba6 # v1.292.0
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Build Jekyll site

@@ -24,7 +24,7 @@ The PR Conflict Detector is a GitHub Action that proactively scans open pull req
 
 Here's how it works:
 
-1. **Scans all open PRs** (including drafts if you want) and fetches their changed files and line ranges
+1. **Scans all open PRs** (including drafts by default) and fetches their changed files and line ranges
 2. **Groups PRs by file** - if two PRs aren't touching any of the same files, there's no reason to compare them
 3. **Checks for line-level overlap** - file-level overlap isn't enough. Two PRs can modify the same file without conflicting. The tool checks whether the actual line ranges intersect.
 4. **Filters out noise** - PRs by the same author are excluded automatically (you probably know about your own conflicts), and the tool deduplicates alerts so you don't get the same notification every time it runs

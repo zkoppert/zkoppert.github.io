@@ -2,7 +2,7 @@
 
 # Can You Measure InnerSource?
 
-*March 13, 2026*
+*February 17, 2026*
 
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
 

@@ -10,4 +10,5 @@ description: > # your text below (remove <br> elements if you don't need line br
   <a href="https://www.youtube.com/playlist?list=PLlGvWIFG1z64HULQmOW25mHXwTyqP63Q9">Recorded Conference Talks</a> 
   
 theme: jekyll-theme-minimal
+include: [CNAME]
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

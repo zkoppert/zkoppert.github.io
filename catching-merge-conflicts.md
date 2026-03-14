@@ -1,8 +1,10 @@
-<img alt="GitHub social card showing the Octocat logo with a blue background, representing open source collaboration" src="images/pr-conflict-detector-hero.png"/>
+<img alt="Inspectocat - the Octocat as a detective with a magnifying glass, inspecting for hidden merge conflicts" src="images/inspectocat.jpg"/>
 
 # Catching Merge Conflicts Before They Catch You
 
-We were three engineering teams, all jumping into the same product space at the same time. Multiple concurrent work streams, tight timelines, and a shared codebase. Everything was moving fast - until the 11th hour, when we discovered that the work we'd each been doing was stepping on each other's toes. The resulting merge conflicts caused days of rework. Not hours. Days.
+*March 13, 2026*
+
+We were three engineering teams at GitHub, all jumping into the same product space at the same time. Multiple concurrent work streams, tight timelines, and a shared codebase. Everything was moving fast - until the 11th hour, when we discovered that the work we'd each been doing was stepping on each other's toes. The resulting merge conflicts caused days of rework. Not hours. Days.
 
 If you've ever been deep into a feature branch, confident in your progress, only to discover that someone across the org has been modifying the same files in the same lines - you know the sinking feeling. It's not just a technical problem. It's a coordination problem. And in our case, it was a coordination problem hiding in plain sight across 1,500 open pull requests spread across two massive repositories that nearly the whole company works in.
 
@@ -18,7 +20,7 @@ What we needed was a way to detect these conflicts early - ideally as soon as tw
 
 ## What the PR Conflict Detector does
 
-The PR Conflict Detector is a GitHub Action that proactively scans open pull requests across your organization and identifies pairs of PRs that are modifying overlapping lines in the same files. It's designed to work at scale - we use it on repositories with hundreds of open PRs - and it supports scanning an entire organization, a single repository, or a specific list of repositories.
+The PR Conflict Detector is a GitHub Action that proactively scans open pull requests across your organization and identifies pairs of PRs that are modifying overlapping lines in the same files. It's designed to work at scale - we use it at GitHub on repositories with over a thousand open PRs - and it supports scanning an entire organization, a single repository, or a specific list of repositories.
 
 Here's how it works:
 

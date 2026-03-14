@@ -2,6 +2,8 @@
 
 # Can You Measure InnerSource?
 
+*March 13, 2026*
+
 I've been asked this question more times than I can count. It usually comes up right after someone pitches an InnerSource program, gets conditional approval, and then gets told to prove it's working.
 
 I know this because it happened to me. At a previous company, I was able to convey the need for InnerSource by demonstrating how much rework we were doing across departments. The CEO didn't like hearing about rework and waste, so we got approval - with a catch. The condition was: "Figure out how to measure if it's working." I walked out of that meeting excited about the green light but also terrified, because I had no idea how to actually measure InnerSource success.

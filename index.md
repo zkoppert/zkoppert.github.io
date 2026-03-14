@@ -9,7 +9,7 @@
 ### Professional 
 
 [Catching Merge Conflicts Before They Catch You](/catching-merge-conflicts)
-<img alt="GitHub social card with Octocat logo on blue background" src="images/pr-conflict-detector-hero.png"/>
+<img alt="Inspectocat - detective Octocat with magnifying glass" src="images/inspectocat.jpg"/>
 
 ---
 

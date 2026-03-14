@@ -1,16 +1,27 @@
-## Developer Portfolio for zkoppert
+## zackkoppert.com
 
-### Introduction
+Personal blog and portfolio for Zack Koppert - Senior Software Engineering Manager at GitHub.
 
-Website portfolio based on a Minimal Jekyll theme for GitHub Pages.
+### Tech stack
+
+- [Jekyll](https://jekyllrb.com/) with the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme
+- Hosted on [GitHub Pages](https://pages.github.com/) with a custom domain
+- Deploys automatically on push to `main` via GitHub Actions
+
+### Local development
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Then open [http://localhost:4000](http://localhost:4000).
 
 ### Deploy
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in the site, from the content in the Markdown files.
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Pushes to `main` trigger the `pages-deploy.yml` workflow, which builds the site and deploys to the `gh-pages` branch. Pull requests get automatic preview deploys via `pr-preview.yml`.
 
 ### Attribution
 
-Jekyll theme "Minimal" for GitHub Pages: https://github.com/pages-themes/minimal (CC0 1.0 Universal License)
-<br>Page template forked from [evanca](https://github.com/evanca/quick-portfolio)
+- [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy) by Cotes Chung (MIT License)
+- Originally based on the [Minimal](https://github.com/pages-themes/minimal) theme and [evanca/quick-portfolio](https://github.com/evanca/quick-portfolio)

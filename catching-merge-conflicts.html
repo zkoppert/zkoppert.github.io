@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Zack Koppert | Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Zack Koppert" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks" />
+<meta property="og:description" content="Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks" />
+<link rel="canonical" href="https://zackkoppert.com/catching-merge-conflicts.html" />
+<meta property="og:url" content="https://zackkoppert.com/catching-merge-conflicts.html" />
+<meta property="og:site_name" content="Zack Koppert" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Zack Koppert" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Senior Software Engineering Manager @ GitHub Previously @ Tektronix, Open Source Team LinkedIn Profile Recorded Conference Talks","headline":"Zack Koppert","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://zackkoppert.com/images/logo.jpg?raw=true"}},"url":"https://zackkoppert.com/catching-merge-conflicts.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=babf453a3a0bcd4b2493870fada9e407f589d831">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="https://zackkoppert.com/">Zack Koppert</a></h1>
+        
+        
+          <img src="/images/logo.jpg?raw=true" alt="Logo" />
+        
+
+        <p>Senior Software Engineering Manager @ GitHub <br> Previously @ Tektronix, Open Source Team <br><br> <a href="https://www.linkedin.com/in/zack-koppert/">LinkedIn Profile</a> <br> <a href="https://www.youtube.com/playlist?list=PLlGvWIFG1z64HULQmOW25mHXwTyqP63Q9">Recorded Conference Talks</a> 
+</p>
+
+        
+
+        
+        <p class="view"><a href="https://github.com/zkoppert">View My GitHub Profile</a></p>
+        
+
+        
+      </header>
+      <section>
+
+      <p><img alt="Inspectocat - the Octocat as a detective with a magnifying glass, inspecting for hidden merge conflicts" src="images/inspectocat.jpg" /></p>
+
+<h1 id="catching-merge-conflicts-before-they-catch-you">Catching Merge Conflicts Before They Catch You</h1>
+
+<p><em>March 13, 2026</em></p>
+
+<p>We were three engineering teams at GitHub, all jumping into the same product space at the same time. Multiple concurrent work streams, tight timelines, and a shared codebase. Everything was moving fast - until the 11th hour, when we discovered that the work we’d each been doing was stepping on each other’s toes. The resulting merge conflicts caused days of rework. Not hours. Days.</p>
+
+<p>If you’ve ever been deep into a feature branch, confident in your progress, only to discover that someone across the org has been modifying the same files in the same lines - you know the sinking feeling. It’s not just a technical problem. It’s a coordination problem. And in our case, it was a coordination problem hiding in plain sight across 1,500 open pull requests spread across two massive repositories that nearly the whole company works in.</p>
+
+<p>That experience is why I built the <a href="https://github.com/github-community-projects/pr-conflict-detector">PR Conflict Detector</a>.</p>
+
+<h2 id="the-problem-with-merge-conflicts">The problem with merge conflicts</h2>
+
+<p>Merge conflicts are inevitable in any codebase with active development. But there’s a big difference between a conflict you know about and one that blindsides you at the worst possible moment.</p>
+
+<p>The traditional approach to dealing with merge conflicts is reactive: you find out about them when you try to merge. By then, both authors have invested significant time building on top of diverging code. The fix is no longer a quick resolution - it’s a rework exercise where someone has to untangle two independently developed features that were never meant to coexist in their current form.</p>
+
+<p>What we needed was a way to detect these conflicts early - ideally as soon as two PRs start touching the same lines of code. Not when one of them tries to merge, but while both are still in progress and the authors still have time to coordinate. This works well at GitHub since we push draft pull requests early for visibility.</p>
+
+<h2 id="what-the-pr-conflict-detector-does">What the PR Conflict Detector does</h2>
+
+<p>The PR Conflict Detector is a GitHub Action that proactively scans open pull requests across your organization and identifies pairs of PRs that are modifying overlapping lines in the same files. It’s designed to work at scale - we use it at GitHub on repositories with over a thousand open PRs - and it supports scanning an entire organization, a single repository, or a specific list of repositories.</p>
+
+<p>Here’s how it works:</p>
+
+<ol>
+  <li><strong>Scans all open PRs</strong> (including drafts by default) and fetches their changed files and line ranges</li>
+  <li><strong>Groups PRs by file</strong> - if two PRs aren’t touching any of the same files, there’s no reason to compare them</li>
+  <li><strong>Checks for line-level overlap</strong> - file-level overlap isn’t enough. Two PRs can modify the same file without conflicting. The tool checks whether the actual line ranges intersect.</li>
+  <li><strong>Filters out noise</strong> - PRs by the same author are excluded automatically (you probably know about your own conflicts), and the tool deduplicates alerts so you don’t get the same notification every time it runs</li>
+  <li><strong>Notifies the right people</strong> - via Slack messages with @mentions, PR comments, GitHub Issues, and a Markdown report in your Actions summary</li>
+</ol>
+
+<p>The result is that teams get notified about potential conflicts while both PRs are still in flight, giving authors a chance to talk to each other and coordinate their changes before either one merges.</p>
+
+<h2 id="smart-about-what-it-reports">Smart about what it reports</h2>
+
+<p>One of the things I care most about with any alerting tool is signal-to-noise ratio. Nobody wants to be buried in notifications that don’t matter. So the PR Conflict Detector is intentionally conservative about when it speaks up.</p>
+
+<p><strong>Same-author filtering.</strong> If you have two PRs that conflict with each other, you already know about both of them. The tool filters these out automatically.</p>
+
+<p><strong>Deduplication.</strong> The tool tracks a state file (<code class="language-plaintext highlighter-rouge">.pr-conflict-state.json</code>) across runs. If it already told you about a conflict yesterday and nothing has changed, it stays quiet. You only get notified about new conflicts or conflicts where the set of overlapping files has changed.</p>
+
+<p><strong>Cluster detection.</strong> When three or more PRs are all tangled together on the same files, the tool groups them into a cluster so you can see the full picture rather than getting individual alerts for each pair.</p>
+
+<p><strong>Optional merge verification.</strong> If you want higher confidence, you can enable <code class="language-plaintext highlighter-rouge">VERIFY_CONFLICTS</code> which uses GitHub’s merge simulation API to confirm that the overlap would actually produce a merge conflict. This reduces false positives but costs more API calls.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>The setup is straightforward. Create a workflow file in any repository and configure which repos to scan:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">PR Conflict Detection</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0</span><span class="nv"> </span><span class="s">9</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">1-5"</span>  <span class="c1"># Weekdays at 9 AM UTC</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+
+<span class="na">permissions</span><span class="pi">:</span>
+  <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+  <span class="na">issues</span><span class="pi">:</span> <span class="s">write</span>
+  <span class="na">pull-requests</span><span class="pi">:</span> <span class="s">write</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">detect-conflicts</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Detect PR Conflicts</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">github-community-projects/pr-conflict-detector@v1</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GH_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">ORGANIZATION</span><span class="pi">:</span> <span class="s">my-org</span>
+          <span class="na">INCLUDE_DRAFTS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+          <span class="na">ENABLE_PR_COMMENTS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+          <span class="na">SLACK_WEBHOOK_URL</span><span class="pi">:</span> <span class="s">$</span>
+</code></pre></div></div>
+
+<p>You can also target specific repositories instead of an entire org:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="na">REPOSITORY</span><span class="pi">:</span> <span class="s2">"</span><span class="s">my-org/repo-a,my-org/repo-b"</span>
+</code></pre></div></div>
+
+<p>Or roll it out incrementally to specific teams:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="na">FILTER_TEAMS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">my-org/frontend-team,my-org/backend-team"</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">FILTER_TEAMS</code> option resolves team membership at runtime, so you don’t need to maintain a list of individual usernames. Add someone to the GitHub team and they’re automatically included in the next scan.</p>
+
+<h2 id="what-we-learned-from-using-it">What we learned from using it</h2>
+
+<p>The biggest insight wasn’t technical - it was cultural. The tool gave teams a natural reason to start a conversation. Instead of discovering a conflict at merge time and having an awkward “who rewrites their code?” discussion, authors now get a heads-up while both PRs are still in progress. The conversation shifts from “your code broke mine” to “hey, looks like we’re both working in this area - want to sync up?”</p>
+
+<p>That’s the outcome I was hoping for. Not just fewer merge conflicts, but earlier coordination between teams that might otherwise be working in isolation on the same codebase.</p>
+
+<h2 id="try-it-out">Try it out</h2>
+
+<p>The <a href="https://github.com/github-community-projects/pr-conflict-detector">PR Conflict Detector</a> is free and open source. It runs as a GitHub Action with no infrastructure to manage. If you’re working in a codebase with multiple active contributors and you’ve ever been surprised by a merge conflict, give it a try.</p>
+
+<p>Check out the <a href="https://github.com/github-community-projects/pr-conflict-detector#readme">README</a> for the full configuration reference, or <a href="https://github.com/github-community-projects/pr-conflict-detector/issues">open an issue</a> if you have questions. I’d love to hear how it works for your team.</p>
+
+
+      </section>
+      <footer>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-000000-0', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+  </body>
+</html>

@@ -8,6 +8,11 @@
 
 ### Professional 
 
+[Catching Merge Conflicts Before They Catch You](/catching-merge-conflicts)
+<img alt="Inspectocat - detective Octocat with magnifying glass" src="images/inspectocat.jpg"/>
+
+---
+
 [Can You Measure InnerSource?](/can-you-measure-innersource)
 <img alt="Collabocats - two GitHub Octocats working together, representing cross-team collaboration" src="images/collabocats.jpg"/>
 

@@ -1,5 +1,7 @@
 # Self Building Jenkins Project
 
+*August 3, 2020*
+
 **Project Description:** At a previous job we set up a Jenkins server to setup some Continuous Integration (CI) on a Inner Source Project that we were maintaining. No problem right?
 <br>
 Well... Who was going to maintain that server, and keep it secure, reproduce it if the server admin left? I decided that it would be more sustainable and reduce my workload to automate the building, configuration, and scaling of the Jenkins CI server.

@@ -2,6 +2,8 @@
 
 # Launching an Open Source Office
 
+*August 3, 2020*
+
 **Project Description:** At a previous company I began noticing that we were spending a lot of time "reinventing" projects that already existed as open source or even rebuilding our own version of proprietary things that other business units in the same company already had built.  
 <br>
 I didn't know it at the time but what I had stumbled upon was a commonly experienced problem that open source and inner source had a solution for. After doing some research and stumbling on the [TODO group](https://todogroup.org/) I found that the company could improve our efficiency by so much if we adopted open/inner source practices.

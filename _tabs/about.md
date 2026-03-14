@@ -6,9 +6,14 @@ order: 4
 
 ## Hey, I'm Zack
 
-I'm a **Senior Software Engineering Manager** at [GitHub](https://github.com)'s **Open Source Programs Office (OSPO)**. I build tools that help organizations measure, manage, and scale their open source and InnerSource programs.
+I'm a **Senior Software Engineering Manager** working at [GitHub](https://github.com)
 
-Previously, I led open source and InnerSource initiatives at Tektronix, where I launched an Open Source Office from scratch and drove cross-team collaboration practices across the engineering org.
+My work focuses on:
+
+- **Leadership**: People management, OSPO strategy and execution
+- **Customers**: Engineering best practices presentations, Hackathons, Conferences, Workshops, Trainings
+- **Engineering**: Backend web services, GitHub Apps, GitHub Actions
+- **Program**: Open Source initiatives, InnerSource initiatives, DevSecOps initiatives
 
 ## What I write about
 

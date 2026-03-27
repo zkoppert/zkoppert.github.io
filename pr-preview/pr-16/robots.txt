@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://zackkoppert.com/pr-preview/pr-16/sitemap.xml

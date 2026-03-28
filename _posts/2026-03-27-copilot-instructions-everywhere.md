@@ -46,12 +46,8 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Symlink copilot instructions for VS Code and CLI
+# Symlink copilot instructions for Copilot CLI
 if [ -f "$DOTFILES_DIR/.github/copilot-instructions.md" ]; then
-  mkdir -p "$HOME/.github"
-  ln -sf "$DOTFILES_DIR/.github/copilot-instructions.md" "$HOME/.github/copilot-instructions.md"
-  echo "✓ Linked copilot-instructions.md → ~/.github/copilot-instructions.md"
-
   mkdir -p "$HOME/.copilot"
   ln -sf "$DOTFILES_DIR/.github/copilot-instructions.md" "$HOME/.copilot/copilot-instructions.md"
   echo "✓ Linked copilot-instructions.md → ~/.copilot/copilot-instructions.md"
@@ -60,7 +56,7 @@ fi
 echo "Dotfiles install complete."
 ```
 
-**In Codespaces**, GitHub automatically clones your dotfiles repo and runs `install.sh`. The `DOTFILES_DIR` variable resolves dynamically to wherever the repo was cloned, so the symlinks just work.
+**In Codespaces**, GitHub automatically clones your dotfiles repo and runs `install.sh`. The `DOTFILES_DIR` variable resolves dynamically to wherever the repo was cloned, so the symlink just works.
 
 **Locally**, run the script once after cloning your dotfiles repo, and you're set.
 

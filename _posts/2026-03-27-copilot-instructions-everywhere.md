@@ -22,7 +22,7 @@ With global instructions in place, those corrections stick. Copilot applies them
 
 ## The problem
 
-Copilot CLI reads global instructions from [`~/.copilot/copilot-instructions.md`](https://docs.github.com/en/copilot/how-tos/copilot-cli/add-custom-instructions#local-instructions). VS Code reads from `~/.github/copilot-instructions.md`. These are local files that don't sync across machines, and they also don't show up in Codespaces by default.
+Copilot CLI reads global instructions from [`~/.copilot/copilot-instructions.md`](https://docs.github.com/en/copilot/how-tos/copilot-cli/add-custom-instructions#local-instructions). This is a local file that doesn't sync across machines, and it doesn't show up in Codespaces by default. VS Code and other IDEs only read `.github/copilot-instructions.md` from the repository root - they don't support a global home directory path.
 
 I wanted one instructions file that:
 - Loads in every Copilot CLI session regardless of which repo I'm in
@@ -109,7 +109,6 @@ Since the symlinks point to files in the repo's working tree, pulling the latest
 |---|---|---|
 | **Local CLI** | Symlink at `~/.copilot/copilot-instructions.md` | launchd pulls dotfiles repo daily + on login |
 | **Codespaces** | `install.sh` runs on Codespace creation, creates symlinks | Fresh clone every Codespace |
-| **VS Code** | Symlink at `~/.github/copilot-instructions.md` | Same launchd sync / same Codespace clone |
 
 ## Why this works
 

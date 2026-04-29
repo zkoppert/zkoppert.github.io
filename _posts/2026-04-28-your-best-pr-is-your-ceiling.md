@@ -5,7 +5,7 @@ categories: [Engineering Practices, Code Review]
 tags: [pull-requests, code-review, developer-experience, github-copilot, engineering-management]
 image:
   path: /assets/img/posts/pr-ceiling-floor.png
-  alt: "A bar chart showing PR description quality dimensions with varying completion rates"
+  alt: "Screenshot of a pull request description with structured sections for Why, What changed, Testing, Monitoring, Tradeoffs, and Rollout"
 ---
 
 

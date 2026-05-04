@@ -21,26 +21,9 @@ When Copilot CLI has access to a language server, it can ask "where is this func
 
 Think of it like the difference between asking a librarian where a book is versus wandering the stacks reading spine labels.
 
-```mermaid
-flowchart LR
-    subgraph without ["Without LSP"]
-        direction TB
-        A1["🤖 Find updateEmail()"] --> B1["grep 'updateEmail'"]
-        B1 --> C1["47 matches across 23 files"]
-        C1 --> D1["Open file 1... wrong"]
-        D1 --> E1["Open file 2... wrong"]
-        E1 --> F1["Open file 3... found it ✓"]
-    end
+**Without LSP:** 🤖 "Find updateEmail()" → `grep 'updateEmail'` → 47 matches across 23 files → open file 1... wrong → open file 2... wrong → open file 3... found it ✓
 
-    subgraph with_lsp ["With LSP"]
-        direction TB
-        A2["🤖 Find updateEmail()"] --> B2["goToDefinition()"]
-        B2 --> C2["email_manager.rb:142 ✓"]
-    end
-
-    style without fill:#fff3f3,stroke:#e55
-    style with_lsp fill:#f0fff0,stroke:#5a5
-```
+**With LSP:** 🤖 "Find updateEmail()" → `goToDefinition()` → `email_manager.rb:142` ✓
 
 ## Why this matters for AI coding assistants
 

@@ -167,10 +167,6 @@ Run `/lsp` in Copilot CLI to confirm they're detected and healthy.
 
 The best way to know if LSP helps *your* workflow is to test it. Pick a task you've already done in a large repo, reintroduce the problem on a branch, and run Copilot CLI with and without LSP. Count the tool calls and time it. The numbers tell the story better than any blog post can.
 
-If you try this, I'd love to hear what you find - [drop me a note](https://github.com/zkoppert) or share your results. I'm curious whether the pattern holds across other languages and codebase sizes.
-
----
-
-*Built with [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli). The experiments, analysis, and even most of this blog post were produced collaboratively with Copilot in my terminal.*
+If you try this, I'm curious whether the pattern holds across other languages and codebase sizes.
 
 

@@ -36,7 +36,7 @@ A language server eliminates that fumbling. In large repos where search is expen
 
 ## The experiment
 
-I picked two real tasks I'd already completed - one in a large Ruby monolith, one in a small Python repo. For each, I reintroduced the original bug on separate branches and let Copilot CLI fix it: once with language servers enabled (LSP-ON), once without (LSP-OFF). Same prompt, same starting state, same task.
+I picked two real tasks I'd already completed - one in a large Ruby monolith, one in a small Python repo. For each, I reintroduced the original bug on separate branches and let Copilot CLI fix it: once with language servers enabled (LSP-ON), once without (LSP-OFF). Same task, same starting state, same codebase.
 
 To check whether the benefit depends on the AI model, I repeated each test across three models: **Claude Sonnet 4.6**, **Claude Opus 4.7**, and **GPT-5.4**. That's 12 total runs (2 repos × 2 conditions × 3 models). I measured both tool call count and wall-clock time for each run.
 
@@ -68,7 +68,7 @@ The task: refactor a `get_contributors()` function from an N+1 API call pattern 
 
 | Model | LSP-ON | LSP-OFF | Difference |
 |-------|--------|---------|------------|
-| Claude Sonnet 4.6 | 57 calls, 667s | ¹, 247s | LSP slower (outlier) |
+| Claude Sonnet 4.6 | 57 calls, 667s | N/A¹, 247s | LSP slower (outlier) |
 | Claude Opus 4.7 | 18 calls, 1,310s | 17 calls, 1,292s | no meaningful difference |
 | GPT-5.4 | 22 calls, 209s | 38 calls, 194s | no meaningful difference |
 
@@ -84,7 +84,7 @@ This makes sense. With only 61 files and clear module boundaries, grep finds the
 
 The pattern is consistent across all three models: **LSP's value scales with the size and complexity of your codebase.**
 
-In the Ruby monolith, LSP turned a 5-minute search-and-pray into a 1-minute precision strike - every single time, regardless of model. In the small Python repo, both approaches performed equally because the codebase was small enough that brute-force search worked fine.
+In the Ruby monolith, LSP turned a 5-minute search-and-pray into a 1-minute precision strike for the models that completed the task - and one model couldn't finish at all without it. In the small Python repo, both approaches performed equally because the codebase was small enough that brute-force search worked fine.
 
 It's worth noting that the two tasks also differed in complexity - the Ruby task was a straightforward find-and-replace while the Python task was a multi-file refactor. So repo size isn't the only variable. That said, the direction is clear: LSP's advantage comes from eliminating expensive search operations, and those only pile up in large codebases.
 

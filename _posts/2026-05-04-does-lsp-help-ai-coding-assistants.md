@@ -72,13 +72,7 @@ With LSP, every model found all four locations and made the fix in about a minut
 
 The most striking result: **Opus without LSP couldn't even complete the task.** It spent over 21 minutes searching, navigating through similarly-named files and test fixtures, and eventually concluded the email had already been changed - it hadn't. The model appears to have found a test expectation containing the target string and mistook it for evidence the change was done. Without semantic navigation in a repo that large, the model got lost in the noise.
 
-```mermaid
-xychart-beta
-    title "Ruby Monolith: Seconds to Complete"
-    x-axis ["Sonnet +LSP", "Sonnet -LSP", "Opus +LSP", "Opus -LSP (DNF)", "GPT +LSP", "GPT -LSP"]
-    y-axis "Seconds" 0 --> 1300
-    bar [103, 331, 65, 1272, 69, 303]
-```
+![Bar chart showing seconds to complete the Ruby monolith task: Sonnet +LSP 103s, Sonnet -LSP 331s, Opus +LSP 65s, Opus -LSP (DNF) 1272s, GPT +LSP 69s, GPT -LSP 303s](/assets/img/posts/lsp-ruby-chart.png)
 
 *\*Opus -LSP (DNF) failed to complete the task correctly despite spending 1,272 seconds searching*
 
@@ -98,13 +92,7 @@ The task: refactor a `get_contributors()` function from an N+1 API call pattern 
 
 This makes sense. With only 61 files and clear module boundaries, grep finds the right file on the first try. There's nothing for LSP to shortcut.
 
-```mermaid
-xychart-beta
-    title "Python Small Repo: Seconds to Complete"
-    x-axis ["Sonnet +LSP", "Sonnet -LSP", "Opus +LSP", "Opus -LSP", "GPT +LSP", "GPT -LSP"]
-    y-axis "Seconds" 0 --> 1400
-    bar [667, 247, 1310, 1292, 209, 194]
-```
+![Bar chart showing seconds to complete the Python repo task: Sonnet +LSP 667s, Sonnet -LSP 247s, Opus +LSP 1310s, Opus -LSP 1292s, GPT +LSP 209s, GPT -LSP 194s](/assets/img/posts/lsp-python-chart.png)
 
 ## When LSP helped, and when it didn't
 

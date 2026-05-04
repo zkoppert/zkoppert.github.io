@@ -3,6 +3,9 @@ title: "Does a Language Server Actually Help AI Coding Assistants? I Ran an A/B 
 date: 2026-05-04
 categories: [Developer Experience, AI Tools]
 tags: [language-server-protocol, github-copilot, developer-experience, ai-coding, experiments]
+image:
+  path: /assets/img/posts/lsp-ruby-chart.png
+  alt: "Bar chart comparing task completion time with and without LSP across three AI models in a large Ruby monolith"
 ---
 
 **TL;DR:** I ran identical coding tasks with and without [language servers](https://microsoft.github.io/language-server-protocol/) enabled in [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli). In a large Ruby monolith (~118k files), LSP made Copilot **3–4x faster** for models that completed the task - and one model couldn't finish at all without it. In a small Python repo (61 files), it made no difference. If you work in large or complex codebases, LSP is worth the 10-minute setup. If your repos are small and well-organized, you can skip it.

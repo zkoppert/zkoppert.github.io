@@ -4,8 +4,8 @@ date: 2026-06-08
 categories: [Developer Tooling, GitHub Copilot]
 tags: [github-copilot, copilot-cli, dotfiles, developer-experience, ai-agents]
 image:
-  path: /assets/img/posts/copilot-cli-splash.png
-  alt: "GitHub Copilot CLI splash screen showing the Copilot mascot in a terminal"
+  path: /assets/img/posts/bouncercat.png
+  alt: "Bouncer Octocat from the GitHub Octodex, standing guard"
 ---
 
 ## TL;DR

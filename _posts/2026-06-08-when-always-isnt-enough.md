@@ -50,11 +50,11 @@ Without enforcement, both rules got skipped. The behavior with `gh-guard` instal
 **From a non-interactive shell (agent invocations):**
 
 - `gh pr ready` is blocked unless `ZACK_CONFIRMED_PR_READY=1` is set in the same invocation.
-- `gh pr create` is blocked unless **both** a multi-model review summary (>=200 bytes) is written to `<git-dir>/copilot-pr-review/<branch>.md` **and** `ZACK_CONFIRMED_PR_CREATE=1` is set in the same invocation. (If the shim can't resolve the repo or branch - detached HEAD, no checkout - the marker path can't be derived, so the env var alone is accepted as a fallback.)
+- `gh pr create` is blocked unless **both** a multi-model review summary (>=200 bytes) already exists at `<git-dir>/copilot-pr-review/<branch>.md` **and** `ZACK_CONFIRMED_PR_CREATE=1` is set on the `gh pr create` invocation. (If the shim can't resolve the repo or branch - detached HEAD, no checkout - the marker path can't be derived, so the env var alone is accepted as a fallback.)
 
 **From an interactive terminal (me, typing):**
 
-- The shim prints what's about to run, reports whether the review marker exists, and prompts `Continue? [y/N]`. It's a checkpoint, not a wall. I'm present, I can make the call.
+- The shim prints what's about to run and prompts `Continue? [y/N]`. For `gh pr create` it also reports whether the review marker exists. It's a checkpoint, not a wall. I'm present, I can make the call.
 
 Everything else passes through to the real `gh` unchanged. It's a checkpoint on two specific subcommands, not a tax on every `gh` command.
 
@@ -74,7 +74,7 @@ IFS=':' read -ra PATH_ENTRIES <<< "$PATH"
 for entry in "${PATH_ENTRIES[@]}"; do
   candidate="$entry/gh"
   [ ! -x "$candidate" ] && continue
-  resolved_dir="$(cd "$entry" 2>/dev/null && pwd)"
+  resolved_dir="$(cd "$entry" 2>/dev/null && pwd || echo "$entry")"
   if [ "$resolved_dir" = "$SCRIPT_PATH" ] || [ "$resolved_dir" = "$SELF_REAL_PATH" ]; then
     continue
   fi
@@ -99,7 +99,7 @@ A few details that took longer than they should have:
 - **Branch names need encoding.** `feat/foo` would collide with anything named `feat%2Ffoo` if you used the raw branch name as a filename. I percent-encode `%` and `/` so most branch names get distinct markers. (On a case-insensitive filesystem like macOS default, branches that differ only in case will still collide. I haven't hit that in practice; I'd add a hash if I did.)
 - **Empty markers must fail.** A bare `touch` should not satisfy the guard. I require the marker to be at least 200 bytes, which is enough to fit a real (even if terse) synthesized review.
 - **Help flags should pass through.** `gh pr create --help` is a legitimate introspection call. The shim scans for `--help`, `-h`, or `help` anywhere in the arguments and falls through without gating.
-- **Invoke via the symlink, not the real path.** If the shim is called by its actual path, it can find itself again in PATH lookup and fork-recurse. The install instructions explicitly tell you to call the symlink in `~/.local/bin/`.
+- **Invoke through the PATH shim, not the real script.** If the shim is called by its actual path, it can find itself again in PATH lookup and fork-recurse. Install it at a stable PATH location (the install instructions drop it at `~/.local/bin/gh`) and let the shell resolve it as `gh`.
 
 ## What about Copilot hooks?
 

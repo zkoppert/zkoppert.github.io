@@ -15,9 +15,9 @@ Babysitting an open pull request is a pile of tiny chores: re-running a flaky re
 
 ## The problem: shepherding is a tax
 
-I go through my day sometimes feeling like there are so many plates to keep spinning (or PRs with so many spinners, haha). I would open a PR, then switch to another project while waiting for ci, waiting for review, waiting for copilot feedback, etc. etc. You can imagine what my browser tab counts are. :sweat_smile: So I built this list of projects and PRs and keep cycling through them looking for an opportunity to move it one step further. It's not my favorite part of my day and feels like friction and a brain-bending amount of context switching.
+I go through my day sometimes feeling like there are so many plates to keep spinning (or PRs with so many spinners, haha). I would open a PR, then switch to another project while waiting for ci, waiting for review, waiting for copilot feedback, etc. etc. You can imagine what my browser tab counts are. 😅 So I built this list of projects and PRs and keep cycling through them looking for an opportunity to move it one step further. It's not my favorite part of my day and feels like friction and a brain-bending amount of context switching.
 
-The more I automate things the worse this problem seems to get because I can have more things running on their own until they need me to help move them forward. Essentially, when you can open more PRs, you have more of them to shepherd, and the bottleneck shifts from writing the change to babysitting it through the pipeline. So because I'm slightly crazy, I made my automation-caused problem better with more automation! :stuck_out_tongue_winking_eye:
+The more I automate things the worse this problem seems to get because I can have more things running on their own until they need me to help move them forward. Essentially, when you can open more PRs, you have more of them to shepherd, and the bottleneck shifts from writing the change to babysitting it through the pipeline. So because I'm slightly crazy, I made my automation-caused problem better with more automation! 😜
 
 ## What it does
 

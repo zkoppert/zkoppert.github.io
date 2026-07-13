@@ -6,7 +6,7 @@ tags: [pull-requests, ci, automation, gh-cli, launchd, dotfiles, developer-exper
 mermaid: true
 image:
   path: /assets/img/posts/babysit-prs.png
-  alt: "Nanny Octocat from the GitHub Octodex, watching over a pull request"
+  alt: "Parent Octocat from the GitHub Octodex, watching over several kids and pull requests, lamenting his toil"
 ---
 
 ## TL;DR

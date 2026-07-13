@@ -63,7 +63,7 @@ You need the [`gh` CLI](https://cli.github.com/) authenticated with `repo` and `
 
 ```bash
 brew install gh terminal-notifier
-gh auth login
+gh auth login --scopes workflow
 git clone https://github.com/zkoppert/babysit-prs.git ~/repos/babysit-prs
 ```
 
